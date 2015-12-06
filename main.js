@@ -1,19 +1,27 @@
 // We need 4 functions.
 //
-// 1: countDown(): begins countdown.
-// 	This will be called via onclick, and will update
-// 	the clock div until at 0, then animate for 10 seconds
-// 	then reset.
+// 1: input(): Keeps track of input as an array and clears the screen
+// 	if an operation, AC, CE, or = is selected.
+// 	This will be called via onclick for those buttions, and will reset
+// 	the display div until = is clicked, then it will call it and
+// 	pass an array of numbers and operations.
+// 	
 //
-// 2: plusTime(): adds 1 minute to timer. We may not block
-// 	the clock from changing, as this is actually a more 
-// 	useful use case, though it is very much anti-pomodoro :)
+// 2: clearLast(): pops the last item off the array.
+//	This will return the array, minus the last item.
 //
-// 3: minusTime(): removes 1 minute from timer.
 //
-// 4: resetTimer(): Simply sets the clock to 25 minutes.
-// 	this gets called when the #reset button is clicked
-// 	and when the countdown = 0.
+// 3: clearAll(): Simply returns the array, empty
+//
+// 4: evaluate(): This one is going to be more complex.
+// 	We may just decide that input() will do its job
+// 	and ensure that all arrays alternate number and operation. 
+// 	Loop through array, if first item is an operation, throw an error.
+// 	If first is number, check next for the operation, then for the number
+// 	Then store the number as a, operation as op, and second number as
+// 	b. Just move linearly through the list as Order of Operations
+// 	Isn't actually a THING for a simple calculator. 
+// 	This will just return a number. Maybe a surprise for 1337
 //
 
 // FUNCTIONAL PROGRAMMING FTW. OOP is for nouns, this is all verbing.
